@@ -75,7 +75,7 @@
 
 
 
-  <meta name="keywords" content="RE,">
+  <meta name="keywords" content="TF,Docker,">
 
 
 
@@ -86,18 +86,18 @@
 
 
 
-<meta name="description" content="Meta-character位置 \b 匹配字符串的开始或结束，boundary。  反义为\B ^ 匹配字符串的开始, (选择处理多行后，表示行的开始) $ 匹配字符串的结束, (同上)  字符 . 匹配任意字符，除换行符  \d 匹配数字。  反义为\D \w 匹配字母、数字、下划线、汉字。 反义为\W \s 匹配任意空白符。  反义为\S  数量 * 前面的字符连续重复使用任意次，[0, +">
-<meta name="keywords" content="RE">
+<meta name="description" content="1.安装NVIDIA显卡驱动介绍两种方法： 1.官网下载驱动文件，手动安装 去NVIDIA官网下载安装包，选择适配自己硬件的版本，然后本地安装（运行下载的runfile文件，运行时需要一些额外的参数，以及一些其他的操作） https://www.nvidia.com/Download/index.aspx?lang=en-us 注意：使用该方法在安装显卡驱动过程中，可能存在一些问题，我尝试几次之后">
+<meta name="keywords" content="TF,Docker">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Regular Express Note">
-<meta property="og:url" content="https://tmedc.github.io/2018/05/02/Regular-Express-Note/index.html">
+<meta property="og:title" content="Ubuntu16.04下配置Docker+GPU+TensorFlow+Pycharm开发环境">
+<meta property="og:url" content="https://tmedc.github.io/2018/12/21/Ubuntu16-04下配置Docker-GPU-TensorFlow-Pycharm开发环境/index.html">
 <meta property="og:site_name" content="Tmedc&#39;s Notes">
-<meta property="og:description" content="Meta-character位置 \b 匹配字符串的开始或结束，boundary。  反义为\B ^ 匹配字符串的开始, (选择处理多行后，表示行的开始) $ 匹配字符串的结束, (同上)  字符 . 匹配任意字符，除换行符  \d 匹配数字。  反义为\D \w 匹配字母、数字、下划线、汉字。 反义为\W \s 匹配任意空白符。  反义为\S  数量 * 前面的字符连续重复使用任意次，[0, +">
+<meta property="og:description" content="1.安装NVIDIA显卡驱动介绍两种方法： 1.官网下载驱动文件，手动安装 去NVIDIA官网下载安装包，选择适配自己硬件的版本，然后本地安装（运行下载的runfile文件，运行时需要一些额外的参数，以及一些其他的操作） https://www.nvidia.com/Download/index.aspx?lang=en-us 注意：使用该方法在安装显卡驱动过程中，可能存在一些问题，我尝试几次之后">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-12-18T14:16:10.167Z">
+<meta property="og:updated_time" content="2018-12-21T02:48:14.565Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Regular Express Note">
-<meta name="twitter:description" content="Meta-character位置 \b 匹配字符串的开始或结束，boundary。  反义为\B ^ 匹配字符串的开始, (选择处理多行后，表示行的开始) $ 匹配字符串的结束, (同上)  字符 . 匹配任意字符，除换行符  \d 匹配数字。  反义为\D \w 匹配字母、数字、下划线、汉字。 反义为\W \s 匹配任意空白符。  反义为\S  数量 * 前面的字符连续重复使用任意次，[0, +">
+<meta name="twitter:title" content="Ubuntu16.04下配置Docker+GPU+TensorFlow+Pycharm开发环境">
+<meta name="twitter:description" content="1.安装NVIDIA显卡驱动介绍两种方法： 1.官网下载驱动文件，手动安装 去NVIDIA官网下载安装包，选择适配自己硬件的版本，然后本地安装（运行下载的runfile文件，运行时需要一些额外的参数，以及一些其他的操作） https://www.nvidia.com/Download/index.aspx?lang=en-us 注意：使用该方法在安装显卡驱动过程中，可能存在一些问题，我尝试几次之后">
 
 
 
@@ -127,13 +127,13 @@
 
 
 
-  <link rel="canonical" href="https://tmedc.github.io/2018/05/02/Regular-Express-Note/">
+  <link rel="canonical" href="https://tmedc.github.io/2018/12/21/Ubuntu16-04下配置Docker-GPU-TensorFlow-Pycharm开发环境/">
 
 
 
 
 
-  <title>Regular Express Note | Tmedc's Notes</title>
+  <title>Ubuntu16.04下配置Docker+GPU+TensorFlow+Pycharm开发环境 | Tmedc's Notes</title>
   
 
 
@@ -270,7 +270,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://tmedc.github.io/2018/05/02/Regular-Express-Note/">
+    <link itemprop="mainEntityOfPage" href="https://tmedc.github.io/2018/12/21/Ubuntu16-04下配置Docker-GPU-TensorFlow-Pycharm开发环境/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="tmedc">
@@ -287,7 +287,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Regular Express Note</h1>
+          <h1 class="post-title" itemprop="name headline">Ubuntu16.04下配置Docker+GPU+TensorFlow+Pycharm开发环境</h1>
         
 
         <div class="post-meta">
@@ -299,8 +299,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-05-02T16:22:01+08:00">
-                2018-05-02
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-12-21T10:35:14+08:00">
+                2018-12-21
               </time>
             
 
@@ -322,8 +322,8 @@
               
               
                 <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/Programing-Language/" itemprop="url" rel="index">
-                    <span itemprop="name">Programing Language</span>
+                  <a href="/categories/Environment-Configuration/" itemprop="url" rel="index">
+                    <span itemprop="name">Environment Configuration</span>
                   </a>
                 </span>
 
@@ -359,70 +359,38 @@
       
 
       
-        <h2 id="Meta-character"><a href="#Meta-character" class="headerlink" title="Meta-character"></a>Meta-character</h2><h3 id="位置"><a href="#位置" class="headerlink" title="位置"></a>位置</h3><ul>
-<li><code>\b</code> 匹配字符串的开始或结束，boundary。  <strong>反义为<code>\B</code></strong></li>
-<li><code>^</code> 匹配字符串的开始, (选择处理多行后，表示行的开始)</li>
-<li><code>$</code> 匹配字符串的结束, (同上)</li>
-</ul>
-<h3 id="字符"><a href="#字符" class="headerlink" title="字符"></a>字符</h3><ul>
-<li><code>.</code> 匹配任意字符，除换行符 </li>
-<li><code>\d</code> 匹配数字。  <strong>反义为<code>\D</code></strong></li>
-<li><code>\w</code> 匹配字母、数字、下划线、汉字。 <strong>反义为<code>\W</code></strong></li>
-<li><code>\s</code> 匹配任意空白符。  <strong>反义为<code>\S</code></strong></li>
-</ul>
-<h3 id="数量"><a href="#数量" class="headerlink" title="数量"></a>数量</h3><ul>
-<li><code>*</code> 前面的字符连续重复使用任意次，[0, +inf]</li>
-<li><code>+</code> 连续重复至少一次，[1, +inf] </li>
-<li><code>?</code> 连续重复0或1次，[0,1]</li>
-<li><code>{n}</code> 前面字符必须重复n次</li>
-<li><code>{n,}</code> 重复n或者更多次，[n, +inf]</li>
-<li><code>{n,m}</code> 重复次数范围是[n,n]</li>
-</ul>
-<h3 id="转义符"><a href="#转义符" class="headerlink" title="转义符"></a>转义符</h3><ul>
-<li>匹配元字符本身时，需要使用<code>\</code>转义符，比如匹配$, 需要<code>\$</code></li>
-<li><code>/</code>也需要使用转义符，即<code>\/</code>的样子</li>
-</ul>
-<h2 id="的使用"><a href="#的使用" class="headerlink" title="[]的使用"></a><code>[]</code>的使用</h2><ul>
-<li>匹配abcd四个字母中任意一个时，使用<code>[abcd]</code>, 类似的有<code>\d</code>=<code>[0-9]</code>, <code>\w</code>=<code>[a-z0-1A-Z]</code></li>
-</ul>
-<h2 id="分支条件"><a href="#分支条件" class="headerlink" title="分支条件"></a>分支条件</h2><ul>
-<li><code>|</code>表示用来分割不同规则，其中任意一个规则匹配即可，并且从左到右直到遇到第一个满足的匹配条件，后续的规则就不管了</li>
-</ul>
-<h2 id="反义"><a href="#反义" class="headerlink" title="反义"></a>反义</h2><ul>
-<li>元字符的反义：把小写改为大写</li>
-<li><code>[]</code>的反义：<code>[^x]</code>表示除x以外的任意字符</li>
-</ul>
-<h2 id="后向引用"><a href="#后向引用" class="headerlink" title="后向引用"></a>后向引用</h2><p><code>()</code> 指定一个子表达式被捕获为一个分组，后续可以被<code>\1</code>代替从而进行重复搜索，默认0为整个正则表达式，1维第一个，2 为第二个…</p>
-<p>组号分配过程需扫描两次，第一次扫描未命名组，第二次扫描命名组，所以命名组的组号一定大于未命名组</p>
-<h3 id="捕获"><a href="#捕获" class="headerlink" title="捕获"></a>捕获</h3><ul>
-<li><code>(exp)</code> 匹配exp并捕获文本到自动命名的组中</li>
-<li><code>(?&lt;name&gt;exp)</code> 或者<code>(?&#39;name&#39;exp)</code>匹配exp，并捕获到命名为name的组中,</li>
-<li><code>(?:exp)</code> 匹配exp，但是不捕获，也不分配组号</li>
-</ul>
-<h2 id="零宽断言、负向零宽断言"><a href="#零宽断言、负向零宽断言" class="headerlink" title="零宽断言、负向零宽断言"></a>零宽断言、负向零宽断言</h2><ul>
-<li>零宽断言用于指定位置，作用和<code>\b</code>、<code>^</code>、<code>$</code>类似</li>
-<li>断言用来声明一个为真的事实，只有断言为真时，才会继续进行匹配</li>
-</ul>
-<h3 id="语法列表"><a href="#语法列表" class="headerlink" title="语法列表"></a>语法列表</h3><p><strong>零宽断言：</strong></p>
+        <h2 id="1-安装NVIDIA显卡驱动"><a href="#1-安装NVIDIA显卡驱动" class="headerlink" title="1.安装NVIDIA显卡驱动"></a>1.安装NVIDIA显卡驱动</h2><p>介绍两种方法：</p>
+<p>1.官网下载驱动文件，手动安装</p>
+<p>去NVIDIA官网下载安装包，选择适配自己硬件的版本，然后本地安装（运行下载的runfile文件，运行时需要一些额外的参数，以及一些其他的操作）</p>
+<p><a href="https://www.nvidia.com/Download/index.aspx?lang=en-us" target="_blank" rel="noopener">https://www.nvidia.com/Download/index.aspx?lang=en-us</a></p>
+<p>注意：使用该方法在安装显卡驱动过程中，可能存在一些问题，我尝试几次之后还是失败</p>
+<p>2.PPA源安装</p>
+<p>方法十分简便，添加ppa源后，在system settings -&gt; Software &amp; Updates -&gt; Additional Drivers 中选择相应驱动即可。（据传该方法未必会有最新驱动，或者可能遇到问题，我运气比较好成功安装了）</p>
+<p>添加ppa源的命令如下:</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo add-apt-repository ppa:xorg-edgers/ppa #添加ppa源</span><br><span class="line">sudo add-apt-repository ppa:graphics-drivers/ppa #添加ppa源</span><br><span class="line">sudo apt-get update #更新apt-get</span><br></pre></td></tr></table></figure>
+<h2 id="2-安装Docker"><a href="#2-安装Docker" class="headerlink" title="2. 安装Docker"></a>2. 安装Docker</h2><p>同样有两种方式可以安装</p>
+<p>1.ppa方式安装，但是速度太慢</p>
+<p><a href="https://docs.docker.com/install/linux/linux-postinstall/" target="_blank" rel="noopener">https://docs.docker.com/install/linux/linux-postinstall/</a></p>
+<p>按照提示操作即可</p>
+<p>2.可以选择deb包安装，可以在清华镜像源下载</p>
+<p><a href="https://mirrors.tuna.tsinghua.edu.cn/docker-ce/linux/" target="_blank" rel="noopener">https://mirrors.tuna.tsinghua.edu.cn/docker-ce/linux/</a></p>
+<p>找到适合自己的版本后，需要依次安装 <code>container.io</code>、 <code>docker-ce-cli</code>、<code>docker-ce</code></p>
+<h2 id="3-安装NVIDIA-docker"><a href="#3-安装NVIDIA-docker" class="headerlink" title="3.安装NVIDIA-docker"></a>3.安装NVIDIA-docker</h2><p>gtihub地址：<a href="https://github.com/NVIDIA/nvidia-docker" target="_blank" rel="noopener">https://github.com/NVIDIA/nvidia-docker</a></p>
+<p>按照提示操作即可</p>
+<h2 id="4-pull-TensorFlow-Docker-image"><a href="#4-pull-TensorFlow-Docker-image" class="headerlink" title="4.pull TensorFlow Docker image"></a>4.pull TensorFlow Docker image</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">docker pull tensorflow/tensorflow                     # latest stable release</span><br><span class="line">docker pull tensorflow/tensorflow:devel-gpu           # nightly dev release w/ GPU support</span><br><span class="line">docker pull tensorflow/tensorflow:latest-gpu-jupyter  # latest release w/ GPU support and Jupyter</span><br></pre></td></tr></table></figure>
+<p>参考地址：<a href="https://www.tensorflow.org/install/docker" target="_blank" rel="noopener">https://www.tensorflow.org/install/docker</a></p>
+<p>然后就可以run TensorFlow Docker image就可以了</p>
+<h2 id="5-配置Pycharm"><a href="#5-配置Pycharm" class="headerlink" title="5.配置Pycharm"></a>5.配置Pycharm</h2><p>完成上述操作后，可以在终端进行开发，为了在IDE中开发，需要使用Pycharm Professional（社区版没有Docker插件）</p>
+<p>在Pycharm中需要完成以下操作：</p>
 <ul>
-<li><code>(?=exp)</code>  匹配exp后面的位置。这个位置后面有exp。断言后缀是exp</li>
-<li><code>(?&lt;=exp)</code> 匹配exp前面的位置。这个位置前面有exp。断言前缀是exp</li>
+<li>提前准备工作：把用户添加到Docker用户组中：<code>sudo usermod -aG docker UserName</code>,如果不进行这一步，在后面Pycharm连接docker时会提示权限不够。</li>
+<li>“File -&gt; Settings -&gt; Build, Execution, Deployment -&gt; Docker” 添加 Docker， 并选择”Unix Socket“</li>
+<li>“File -&gt; Settings -&gt; Project -&gt; Project Interpreter” 添加新的Interpreter，选择 Docker类型，并选择对应的image<br>到此为止，已经成功添加Docker中的TensorFlow为解释器，但是此时如果运行，程序会提示无法找到脚本文件，下面要进行配置过程中最为关键的两步：<br>1.挂载host目录到container中：在“File -&gt; Settings -&gt; Project -&gt; Project Interpreter”中， 添加“Path mapping”：“<project root=""> -&gt; /opt/project”<br>完成这一步后，运行代码，会提示无法找到<code>libcuda.so.1</code>的库，这是因为Pycharm默认使用的是<code>docker</code>而不是<code>nvidia-docker</code>，所以要进行下一步操作更改<code>nvidia-docker</code>为默认的docker<br>2.把<code>&quot;default-runtime&quot;: &quot;nvidia&quot;,</code>添加到<code>/etc/docker/daemon.json</code>文件中<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    &quot;default-runtime&quot;:&quot;nvidia&quot;,</span><br><span class="line">    &quot;runtimes&quot;: &#123;</span><br><span class="line">        &quot;nvidia&quot;: &#123;</span><br><span class="line">            &quot;path&quot;: &quot;nvidia-container-runtime&quot;,</span><br><span class="line">            &quot;runtimeArgs&quot;: []</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</project></li>
 </ul>
-<p><strong>负向零宽断言：</strong></p>
-<ul>
-<li><code>(?!exp)</code> 匹配后面不是exp的位置。这个位置后面没有exp。断言后缀不是exp</li>
-<li><code>(?&lt;!exp)</code> 匹配前面不是exp的位置。这个位置前面没有exp。断言前缀不是exp</li>
-</ul>
-<h2 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h2><ul>
-<li>不忽略空白符时：使用<code>(?#comment)</code> 来写注释</li>
-<li>忽略空白符时： 和python注释规则一样，<code>#</code>后面直至行尾都被认为时注释</li>
-</ul>
-<h2 id="贪婪与懒惰"><a href="#贪婪与懒惰" class="headerlink" title="贪婪与懒惰"></a>贪婪与懒惰</h2><ul>
-<li>正则表达式在默认情况下，会尽可能匹配更长的字符串，称为“贪婪”。</li>
-<li>在匹配条件后面加上<code>?</code>可以转为懒惰模式，尽可能使用最少的重复。例如：<code>*?</code> 匹配任意次，但尽可能少重复</li>
-<li>比贪婪懒惰规则更高优先级的规则是：最先开始的的匹配拥有最高优先级，”The match that begins earliest wins.”</li>
-</ul>
-<h2 id="平衡组-递归匹配"><a href="#平衡组-递归匹配" class="headerlink" title="平衡组/递归匹配"></a>平衡组/递归匹配</h2>
+<p>然后要重启docker的守护进程：<code>sudo pkill -SIGHUP dockerd</code>,这样以来刚刚更改的配置就生效了，可以在Pycharm中正常run脚本了。</p>
+<h2 id="6-在TensorFlow-image中导入新的库"><a href="#6-在TensorFlow-image中导入新的库" class="headerlink" title="6.在TensorFlow image中导入新的库"></a>6.在TensorFlow image中导入新的库</h2><p>在docker中，所有在container中进行的更改都不会影响image，所以如果想在image中导入新的库，需要在container中下载新的库之后，commit之后才能保存在image中，后续在继续更新具体操作方法</p>
+
       
     </div>
     
@@ -439,7 +407,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/RE/" rel="tag"># RE</a>
+            <a href="/tags/TF/" rel="tag"># TF</a>
+          
+            <a href="/tags/Docker/" rel="tag"># Docker</a>
           
         </div>
       
@@ -452,8 +422,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/03/04/Python-Note/" rel="next" title="Python Note">
-                <i class="fa fa-chevron-left"></i> Python Note
+              <a href="/2018/12/18/平均与均摊时间复杂度/" rel="next" title="平均与均摊时间复杂度">
+                <i class="fa fa-chevron-left"></i> 平均与均摊时间复杂度
               </a>
             
           </div>
@@ -461,10 +431,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/06/15/Algorithm-Note/" rel="prev" title="Algorithm Note">
-                Algorithm Note <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -614,7 +580,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Meta-character"><span class="nav-number">1.</span> <span class="nav-text">Meta-character</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#位置"><span class="nav-number">1.1.</span> <span class="nav-text">位置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#字符"><span class="nav-number">1.2.</span> <span class="nav-text">字符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数量"><span class="nav-number">1.3.</span> <span class="nav-text">数量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#转义符"><span class="nav-number">1.4.</span> <span class="nav-text">转义符</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#的使用"><span class="nav-number">2.</span> <span class="nav-text">[]的使用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#分支条件"><span class="nav-number">3.</span> <span class="nav-text">分支条件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#反义"><span class="nav-number">4.</span> <span class="nav-text">反义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#后向引用"><span class="nav-number">5.</span> <span class="nav-text">后向引用</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#捕获"><span class="nav-number">5.1.</span> <span class="nav-text">捕获</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#零宽断言、负向零宽断言"><span class="nav-number">6.</span> <span class="nav-text">零宽断言、负向零宽断言</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#语法列表"><span class="nav-number">6.1.</span> <span class="nav-text">语法列表</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#注释"><span class="nav-number">7.</span> <span class="nav-text">注释</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#贪婪与懒惰"><span class="nav-number">8.</span> <span class="nav-text">贪婪与懒惰</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#平衡组-递归匹配"><span class="nav-number">9.</span> <span class="nav-text">平衡组/递归匹配</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-安装NVIDIA显卡驱动"><span class="nav-number">1.</span> <span class="nav-text">1.安装NVIDIA显卡驱动</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-安装Docker"><span class="nav-number">2.</span> <span class="nav-text">2. 安装Docker</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-安装NVIDIA-docker"><span class="nav-number">3.</span> <span class="nav-text">3.安装NVIDIA-docker</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-pull-TensorFlow-Docker-image"><span class="nav-number">4.</span> <span class="nav-text">4.pull TensorFlow Docker image</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-配置Pycharm"><span class="nav-number">5.</span> <span class="nav-text">5.配置Pycharm</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-在TensorFlow-image中导入新的库"><span class="nav-number">6.</span> <span class="nav-text">6.在TensorFlow image中导入新的库</span></a></li></ol></div>
             
 
           </div>
