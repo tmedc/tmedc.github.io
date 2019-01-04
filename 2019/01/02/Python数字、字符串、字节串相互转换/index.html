@@ -75,7 +75,7 @@
 
 
 
-  <meta name="keywords" content="Algorithm,">
+  <meta name="keywords" content="Python,">
 
 
 
@@ -86,18 +86,18 @@
 
 
 
-<meta name="description" content="时间复杂度 时间复杂度表示的不是程序运行时间的长短，而是随着元素数量增加，程序运行时间的增长速度 常见的有log(n) n…  数组和链表 数组的查询方便 链表的增删、插入方便   递归 递归可以理解为函数将自己作为子函数，自己调用自己直到满足条件 递归使用时，分为基线条件和递归条件  快速排序 快速排序平均情况下时间复杂度为nlog(n), 最糟情况下时间复杂度为n^2 合并排序时间复杂度为nl">
-<meta name="keywords" content="Algorithm">
+<meta name="description" content="近期用到了一些有关Python字节串的内容，整理一下相关数据类型之间的转换方法。 一.整型数据向其他类型的转换以下代码中a为int类型  整型 进制转换：转换后就变成了字符串！！！ 输出时进制转换：print(&amp;quot;%#x&amp;quot;%a)  或者 print(&amp;quot;%#o&amp;quot;%a)  浮点型 隐式转换 或者float(a)  字符串 直接转换：str(a) 改变进制：hex(">
+<meta name="keywords" content="Python">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Algorithm Note">
-<meta property="og:url" content="https://tmedc.github.io/2018/06/15/Algorithm-Note/index.html">
+<meta property="og:title" content="Python数字、字符串、字节串相互转换">
+<meta property="og:url" content="https://tmedc.github.io/2019/01/02/Python数字、字符串、字节串相互转换/index.html">
 <meta property="og:site_name" content="Tmedc&#39;s Notes">
-<meta property="og:description" content="时间复杂度 时间复杂度表示的不是程序运行时间的长短，而是随着元素数量增加，程序运行时间的增长速度 常见的有log(n) n…  数组和链表 数组的查询方便 链表的增删、插入方便   递归 递归可以理解为函数将自己作为子函数，自己调用自己直到满足条件 递归使用时，分为基线条件和递归条件  快速排序 快速排序平均情况下时间复杂度为nlog(n), 最糟情况下时间复杂度为n^2 合并排序时间复杂度为nl">
+<meta property="og:description" content="近期用到了一些有关Python字节串的内容，整理一下相关数据类型之间的转换方法。 一.整型数据向其他类型的转换以下代码中a为int类型  整型 进制转换：转换后就变成了字符串！！！ 输出时进制转换：print(&amp;quot;%#x&amp;quot;%a)  或者 print(&amp;quot;%#o&amp;quot;%a)  浮点型 隐式转换 或者float(a)  字符串 直接转换：str(a) 改变进制：hex(">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-12-18T14:16:10.167Z">
+<meta property="og:updated_time" content="2019-01-02T11:55:19.972Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Algorithm Note">
-<meta name="twitter:description" content="时间复杂度 时间复杂度表示的不是程序运行时间的长短，而是随着元素数量增加，程序运行时间的增长速度 常见的有log(n) n…  数组和链表 数组的查询方便 链表的增删、插入方便   递归 递归可以理解为函数将自己作为子函数，自己调用自己直到满足条件 递归使用时，分为基线条件和递归条件  快速排序 快速排序平均情况下时间复杂度为nlog(n), 最糟情况下时间复杂度为n^2 合并排序时间复杂度为nl">
+<meta name="twitter:title" content="Python数字、字符串、字节串相互转换">
+<meta name="twitter:description" content="近期用到了一些有关Python字节串的内容，整理一下相关数据类型之间的转换方法。 一.整型数据向其他类型的转换以下代码中a为int类型  整型 进制转换：转换后就变成了字符串！！！ 输出时进制转换：print(&amp;quot;%#x&amp;quot;%a)  或者 print(&amp;quot;%#o&amp;quot;%a)  浮点型 隐式转换 或者float(a)  字符串 直接转换：str(a) 改变进制：hex(">
 
 
 
@@ -127,13 +127,13 @@
 
 
 
-  <link rel="canonical" href="https://tmedc.github.io/2018/06/15/Algorithm-Note/">
+  <link rel="canonical" href="https://tmedc.github.io/2019/01/02/Python数字、字符串、字节串相互转换/">
 
 
 
 
 
-  <title>Algorithm Note | Tmedc's Notes</title>
+  <title>Python数字、字符串、字节串相互转换 | Tmedc's Notes</title>
   
 
 
@@ -270,7 +270,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://tmedc.github.io/2018/06/15/Algorithm-Note/">
+    <link itemprop="mainEntityOfPage" href="https://tmedc.github.io/2019/01/02/Python数字、字符串、字节串相互转换/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="tmedc">
@@ -287,7 +287,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Algorithm Note</h1>
+          <h1 class="post-title" itemprop="name headline">Python数字、字符串、字节串相互转换</h1>
         
 
         <div class="post-meta">
@@ -299,8 +299,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-06-15T16:24:10+08:00">
-                2018-06-15
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-01-02T10:37:57+08:00">
+                2019-01-02
               </time>
             
 
@@ -322,8 +322,8 @@
               
               
                 <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/Algorithm/" itemprop="url" rel="index">
-                    <span itemprop="name">Algorithm</span>
+                  <a href="/categories/Programing-Language/" itemprop="url" rel="index">
+                    <span itemprop="name">Programing Language</span>
                   </a>
                 </span>
 
@@ -359,74 +359,71 @@
       
 
       
-        <h3 id="时间复杂度"><a href="#时间复杂度" class="headerlink" title="时间复杂度"></a>时间复杂度</h3><ul>
-<li>时间复杂度表示的不是程序运行时间的长短，而是随着元素数量增加，程序运行时间的增长速度</li>
-<li>常见的有<code>log(n)</code> <code>n</code>…</li>
-</ul>
-<h3 id="数组和链表"><a href="#数组和链表" class="headerlink" title="数组和链表"></a>数组和链表</h3><ul>
-<li>数组的查询方便</li>
-<li>链表的增删、插入方便 </li>
-</ul>
-<h3 id="递归"><a href="#递归" class="headerlink" title="递归"></a>递归</h3><ul>
-<li>递归可以理解为函数将自己作为子函数，自己调用自己直到满足条件</li>
-<li>递归使用时，分为基线条件和递归条件</li>
-</ul>
-<h3 id="快速排序"><a href="#快速排序" class="headerlink" title="快速排序"></a>快速排序</h3><ul>
-<li>快速排序平均情况下时间复杂度为<code>nlog(n)</code>, 最糟情况下时间复杂度为<code>n^2</code></li>
-<li>合并排序时间复杂度为<code>nlog(n)</code>, 但是一般情况下要慢于快速排序</li>
-</ul>
-<h3 id="hash-table"><a href="#hash-table" class="headerlink" title="hash table"></a>hash table</h3><ul>
-<li>哈希表的应用可以：查找元素、防止重复、用作缓存(URL为键,网页数据为值)</li>
-<li>hash table要注意避开冲突，可以使用较低的填装因子、良好的散列函数</li>
-</ul>
-<h3 id="队列和栈"><a href="#队列和栈" class="headerlink" title="队列和栈"></a>队列和栈</h3><ul>
-<li>队列和栈类似, 队列是FIFO, 栈是LIFO</li>
-</ul>
-<h3 id="图和树"><a href="#图和树" class="headerlink" title="图和树"></a>图和树</h3><ul>
-<li>图是用边表示拓扑关系的网络图，分为有向图和无向图</li>
-<li>树是一种特殊的图，没有往后指的边</li>
-</ul>
-<h3 id="广度优先搜索"><a href="#广度优先搜索" class="headerlink" title="广度优先搜索"></a>广度优先搜索</h3><ul>
-<li>用在非加权图的最短路径查找</li>
-</ul>
-<h3 id="狄克斯特拉算法"><a href="#狄克斯特拉算法" class="headerlink" title="狄克斯特拉算法"></a>狄克斯特拉算法</h3><ul>
-<li>用在加权图的最短路径查找</li>
-<li>只适用于有向无环图</li>
-<li>存在负权边时,不再适用</li>
-</ul>
-<h1 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h1><h2 id="原码反码补码"><a href="#原码反码补码" class="headerlink" title="原码反码补码"></a>原码反码补码</h2><ul>
-<li>对于正数而言，三者一样。首位符号位，0为正数，1为负数</li>
-<li>对于负数而言，原码是符号位加上绝对值的码；反码是除去符号位外，其余对原码取反，解决了原码正负相加不为零的问题；补码是反码+1，也可以用高一位的正数比如10000类似这种减去绝对值的码，解决了反码两个0的问题</li>
-<li>使用补码时，正数是0~127，负数是-1~-128 （以一字节为例）</li>
-</ul>
-<h2 id="转义字符"><a href="#转义字符" class="headerlink" title="转义字符"></a>转义字符</h2><ul>
-<li>转义字符的符号是反斜杠 \ ,回车上边这个</li>
-<li>\后边可以跟 a b f n r t v \ ‘ “ ? 0                  (?可能存在疑问)</li>
-<li>还以直接跟数字 默认前三个按八进制处理 输出ASCII字符 (如果三个数字第一个是0,这个0就被忽略了,074和74的效果一样.<strong>无聊试了一下,最大可以接受777 ,如果是778 就会按77处理,输出一个?在输出8</strong>,这个777是十进制的511)</li>
-<li>可以跟\x和数字 默认前两个数字按十六进制处理 输出ASCII字符(只有小写x才对,大写X不会转义)</li>
-</ul>
-<h2 id="字符串匹配-KMP算法"><a href="#字符串匹配-KMP算法" class="headerlink" title="字符串匹配 KMP算法"></a>字符串匹配 KMP算法</h2><ul>
-<li>next数组</li>
-<li>nextval数组</li>
-</ul>
-<h2 id="哈夫曼编码"><a href="#哈夫曼编码" class="headerlink" title="哈夫曼编码"></a>哈夫曼编码</h2><ul>
-<li>根据字母出现频率高低</li>
-</ul>
-<h2 id="前缀码"><a href="#前缀码" class="headerlink" title="前缀码"></a>前缀码</h2><ul>
-<li>a为0-1序列（字符串），Q=｛a,a1,a2…}，如果Q中没有一个序列是另一个序列的前缀，则称Q为前缀码</li>
-</ul>
-<h1 id="组合数学"><a href="#组合数学" class="headerlink" title="组合数学"></a>组合数学</h1><h2 id="卡特兰数"><a href="#卡特兰数" class="headerlink" title="卡特兰数"></a>卡特兰数</h2><ul>
-<li>待解决。。。</li>
-</ul>
-<h1 id="树"><a href="#树" class="headerlink" title="树"></a>树</h1><h2 id="二叉树"><a href="#二叉树" class="headerlink" title="二叉树"></a>二叉树</h2><h3 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h3><ul>
-<li>满二叉树</li>
-<li>完全二叉树</li>
-</ul>
-<h3 id="遍历"><a href="#遍历" class="headerlink" title="遍历"></a>遍历</h3><ul>
-<li>前序遍历 NLR</li>
-<li>中序遍历 LNR</li>
-<li>后序遍历 LRN</li>
-</ul>
+        <p>近期用到了一些有关Python字节串的内容，整理一下相关数据类型之间的转换方法。</p>
+<h3 id="一-整型数据向其他类型的转换"><a href="#一-整型数据向其他类型的转换" class="headerlink" title="一.整型数据向其他类型的转换"></a>一.整型数据向其他类型的转换</h3><p>以下代码中a为int类型</p>
+<ol>
+<li><p>整型</p>
+<p>进制转换：转换后就变成了字符串！！！</p>
+<p>输出时进制转换：<code>print(&quot;%#x&quot;%a)</code>  或者 <code>print(&quot;%#o&quot;%a)</code></p>
+</li>
+<li><p>浮点型</p>
+<p>隐式转换</p>
+<p>或者<code>float(a)</code></p>
+</li>
+<li><p>字符串</p>
+<p>直接转换：<code>str(a)</code></p>
+<p>改变进制：<code>hex(a</code>) ， <code>oct(a)</code></p>
+<p>数字到单个ASCII字符转换：<code>chr(a)</code></p>
+</li>
+<li><p>字节串</p>
+<p><code>bytes([a, a1, a2])</code>（解释：将需要转换的整型数字放入list中，再传给<code>bytes()</code>函数，如果直接将整型数字N传过去，会返回N个空字节。</p>
+<p><code>a.to_bytes(len, byteorder=&#39;big&#39;/&#39;little&#39;, signed=True/False)</code>其中len为转换后的字节串长度</p>
+<hr>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> struct</span><br><span class="line">struct.pack(<span class="string">'B'</span>/<span class="string">'&lt;H'</span>/<span class="string">'&gt;H'</span>, a)</span><br><span class="line"><span class="comment"># 第一个参数是格式字符串，指定了字节格式的长度，字节顺序等</span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h3 id="二、浮点型向其他类型的转换"><a href="#二、浮点型向其他类型的转换" class="headerlink" title="二、浮点型向其他类型的转换"></a>二、浮点型向其他类型的转换</h3><p>以下代码中f为float类型</p>
+<ol>
+<li><p>整型</p>
+<p>取整：<code>int(f)</code></p>
+<p>四舍六入五成双：<code>round(f)</code> <em>注意:</em> <code>round()</code>函数可以接收第二个参数调整舍入的位置，默认为1，如果是-1则舍入十位，如果是2则舍入百分位</p>
+</li>
+<li><p>浮点型</p>
+</li>
+<li><p>字符串</p>
+<p><code>str(f)</code></p>
+</li>
+<li><p>字节串</p>
+</li>
+</ol>
+<h3 id="三、字符串向其他类型的转换"><a href="#三、字符串向其他类型的转换" class="headerlink" title="三、字符串向其他类型的转换"></a>三、字符串向其他类型的转换</h3><p>以下代码中s为字符串类型</p>
+<ol>
+<li><p>整型</p>
+<p>十进制字符串转为int：<code>int(s)</code></p>
+<p>N进制字符串转为int：<code>int(s, N)</code></p>
+<p>二进制字符串转为int：<code>int(s, 2)</code></p>
+<p>八进制字符串转为int：<code>int(s,8)</code></p>
+<p>十六进制字符串转为int：<code>int(s, 16)</code></p>
+</li>
+</ol>
+<p>​    单个字符转换为ASCII序号：<code>ord(s)</code></p>
+<ol start="2">
+<li><p>浮点型</p>
+<p><code>float(s)</code></p>
+</li>
+<li><p>字符串</p>
+</li>
+</ol>
+<ol start="4">
+<li>字节串</li>
+</ol>
+<h3 id="四、字节串向其他类型的转换"><a href="#四、字节串向其他类型的转换" class="headerlink" title="四、字节串向其他类型的转换"></a>四、字节串向其他类型的转换</h3><p>以下代码中b为字节串类型</p>
+<ol>
+<li>整型</li>
+<li>浮点型</li>
+<li>字符串</li>
+<li>字节串</li>
+</ol>
 
       
     </div>
@@ -444,7 +441,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Algorithm/" rel="tag"># Algorithm</a>
+            <a href="/tags/Python/" rel="tag"># Python</a>
           
         </div>
       
@@ -457,8 +454,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/05/02/Regular-Express-Note/" rel="next" title="Regular Express Note">
-                <i class="fa fa-chevron-left"></i> Regular Express Note
+              <a href="/2018/12/21/Ubuntu16-04下配置Docker-GPU-TensorFlow-Pycharm开发环境/" rel="next" title="Ubuntu16.04下配置Docker+GPU+TensorFlow+Pycharm开发环境">
+                <i class="fa fa-chevron-left"></i> Ubuntu16.04下配置Docker+GPU+TensorFlow+Pycharm开发环境
               </a>
             
           </div>
@@ -466,10 +463,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/10/09/10月9日面试/" rel="prev" title="10月9日面试">
-                10月9日面试 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -619,7 +612,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#时间复杂度"><span class="nav-number">1.</span> <span class="nav-text">时间复杂度</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数组和链表"><span class="nav-number">2.</span> <span class="nav-text">数组和链表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#递归"><span class="nav-number">3.</span> <span class="nav-text">递归</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#快速排序"><span class="nav-number">4.</span> <span class="nav-text">快速排序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#hash-table"><span class="nav-number">5.</span> <span class="nav-text">hash table</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#队列和栈"><span class="nav-number">6.</span> <span class="nav-text">队列和栈</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#图和树"><span class="nav-number">7.</span> <span class="nav-text">图和树</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#广度优先搜索"><span class="nav-number">8.</span> <span class="nav-text">广度优先搜索</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#狄克斯特拉算法"><span class="nav-number">9.</span> <span class="nav-text">狄克斯特拉算法</span></a></li></ol><li class="nav-item nav-level-1"><a class="nav-link" href="#字符串"><span class="nav-number"></span> <span class="nav-text">字符串</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#原码反码补码"><span class="nav-number"></span> <span class="nav-text">原码反码补码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#转义字符"><span class="nav-number"></span> <span class="nav-text">转义字符</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#字符串匹配-KMP算法"><span class="nav-number"></span> <span class="nav-text">字符串匹配 KMP算法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#哈夫曼编码"><span class="nav-number"></span> <span class="nav-text">哈夫曼编码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#前缀码"><span class="nav-number"></span> <span class="nav-text">前缀码</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#组合数学"><span class="nav-number"></span> <span class="nav-text">组合数学</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#卡特兰数"><span class="nav-number"></span> <span class="nav-text">卡特兰数</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#树"><span class="nav-number"></span> <span class="nav-text">树</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#二叉树"><span class="nav-number"></span> <span class="nav-text">二叉树</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#分类"><span class="nav-number">1.</span> <span class="nav-text">分类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#遍历"><span class="nav-number">2.</span> <span class="nav-text">遍历</span></a></li></ol></li></ol></li></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#一-整型数据向其他类型的转换"><span class="nav-number">1.</span> <span class="nav-text">一.整型数据向其他类型的转换</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二、浮点型向其他类型的转换"><span class="nav-number">2.</span> <span class="nav-text">二、浮点型向其他类型的转换</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三、字符串向其他类型的转换"><span class="nav-number">3.</span> <span class="nav-text">三、字符串向其他类型的转换</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#四、字节串向其他类型的转换"><span class="nav-number">4.</span> <span class="nav-text">四、字节串向其他类型的转换</span></a></li></ol></div>
             
 
           </div>
