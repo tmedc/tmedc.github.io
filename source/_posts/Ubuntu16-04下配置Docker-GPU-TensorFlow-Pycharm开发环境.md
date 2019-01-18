@@ -90,3 +90,13 @@ docker pull tensorflow/tensorflow:latest-gpu-jupyter  # latest release w/ GPU su
 ## 6.在TensorFlow image中导入新的库
 
 在docker中，所有在container中进行的更改都不会影响image，所以如果想在image中导入新的库，需要在container中下载新的库之后，commit之后才能保存在image中，后续在继续更新具体操作方法
+
+## 7.其余常见问题
+
+1. Ubuntu切换显卡问题，当使用的显卡是Intel的集成显卡时，运行GPU版的TensorFlow会报错，此时需要把显卡切换为NVIDIA显卡。在安装`nvidia-prime`后，在终端执行以下命令`sudo prime-select nvidia`，注销后重新登录即可切换为NVIDIA显卡。
+
+## 8.附录
+
+[一个超级详细、非常清晰、极其牛逼的docker教程](https://yeasy.gitbooks.io/docker_practice/content/)
+
+ 
