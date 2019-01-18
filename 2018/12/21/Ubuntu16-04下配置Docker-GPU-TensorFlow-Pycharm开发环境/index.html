@@ -94,7 +94,7 @@
 <meta property="og:site_name" content="Tmedc&#39;s Notes">
 <meta property="og:description" content="1.安装NVIDIA显卡驱动介绍两种方法： 1.官网下载驱动文件，手动安装 去NVIDIA官网下载安装包，选择适配自己硬件的版本，然后本地安装（运行下载的runfile文件，运行时需要一些额外的参数，以及一些其他的操作） https://www.nvidia.com/Download/index.aspx?lang=en-us 注意：使用该方法在安装显卡驱动过程中，可能存在一些问题，我尝试几次之后">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-12-21T02:48:14.565Z">
+<meta property="og:updated_time" content="2019-01-14T11:43:36.992Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Ubuntu16.04下配置Docker+GPU+TensorFlow+Pycharm开发环境">
 <meta name="twitter:description" content="1.安装NVIDIA显卡驱动介绍两种方法： 1.官网下载驱动文件，手动安装 去NVIDIA官网下载安装包，选择适配自己硬件的版本，然后本地安装（运行下载的runfile文件，运行时需要一些额外的参数，以及一些其他的操作） https://www.nvidia.com/Download/index.aspx?lang=en-us 注意：使用该方法在安装显卡驱动过程中，可能存在一些问题，我尝试几次之后">
@@ -390,6 +390,10 @@
 </ul>
 <p>然后要重启docker的守护进程：<code>sudo pkill -SIGHUP dockerd</code>,这样以来刚刚更改的配置就生效了，可以在Pycharm中正常run脚本了。</p>
 <h2 id="6-在TensorFlow-image中导入新的库"><a href="#6-在TensorFlow-image中导入新的库" class="headerlink" title="6.在TensorFlow image中导入新的库"></a>6.在TensorFlow image中导入新的库</h2><p>在docker中，所有在container中进行的更改都不会影响image，所以如果想在image中导入新的库，需要在container中下载新的库之后，commit之后才能保存在image中，后续在继续更新具体操作方法</p>
+<h2 id="7-其余常见问题"><a href="#7-其余常见问题" class="headerlink" title="7.其余常见问题"></a>7.其余常见问题</h2><ol>
+<li>Ubuntu切换显卡问题，当使用的显卡是Intel的集成显卡时，运行GPU版的TensorFlow会报错，此时需要把显卡切换为NVIDIA显卡。在安装<code>nvidia-prime</code>后，在终端执行以下命令<code>sudo prime-select nvidia</code>，注销后重新登录即可切换为NVIDIA显卡。</li>
+</ol>
+<h2 id="8-附录"><a href="#8-附录" class="headerlink" title="8.附录"></a>8.附录</h2><p><a href="https://yeasy.gitbooks.io/docker_practice/content/" target="_blank" rel="noopener">一个超级详细、非常清晰、极其牛逼的docker教程</a></p>
 
       
     </div>
@@ -513,7 +517,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-count">10</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -584,7 +588,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-安装NVIDIA显卡驱动"><span class="nav-number">1.</span> <span class="nav-text">1.安装NVIDIA显卡驱动</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-安装Docker"><span class="nav-number">2.</span> <span class="nav-text">2. 安装Docker</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-安装NVIDIA-docker"><span class="nav-number">3.</span> <span class="nav-text">3.安装NVIDIA-docker</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-pull-TensorFlow-Docker-image"><span class="nav-number">4.</span> <span class="nav-text">4.pull TensorFlow Docker image</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-配置Pycharm"><span class="nav-number">5.</span> <span class="nav-text">5.配置Pycharm</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-在TensorFlow-image中导入新的库"><span class="nav-number">6.</span> <span class="nav-text">6.在TensorFlow image中导入新的库</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-安装NVIDIA显卡驱动"><span class="nav-number">1.</span> <span class="nav-text">1.安装NVIDIA显卡驱动</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-安装Docker"><span class="nav-number">2.</span> <span class="nav-text">2. 安装Docker</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-安装NVIDIA-docker"><span class="nav-number">3.</span> <span class="nav-text">3.安装NVIDIA-docker</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-pull-TensorFlow-Docker-image"><span class="nav-number">4.</span> <span class="nav-text">4.pull TensorFlow Docker image</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-配置Pycharm"><span class="nav-number">5.</span> <span class="nav-text">5.配置Pycharm</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-在TensorFlow-image中导入新的库"><span class="nav-number">6.</span> <span class="nav-text">6.在TensorFlow image中导入新的库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-其余常见问题"><span class="nav-number">7.</span> <span class="nav-text">7.其余常见问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-附录"><span class="nav-number">8.</span> <span class="nav-text">8.附录</span></a></li></ol></div>
             
 
           </div>

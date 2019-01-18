@@ -94,7 +94,7 @@
 <meta property="og:site_name" content="Tmedc&#39;s Notes">
 <meta property="og:description" content="近期用到了一些有关Python字节串的内容，整理一下相关数据类型之间的转换方法。 一.整型数据向其他类型的转换以下代码中a为int类型  整型 进制转换：转换后就变成了字符串！！！ 输出时进制转换：print(&amp;quot;%#x&amp;quot;%a)  或者 print(&amp;quot;%#o&amp;quot;%a)  浮点型 隐式转换 或者float(a)  字符串 直接转换：str(a) 改变进制：hex(">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-01-02T11:55:19.972Z">
+<meta property="og:updated_time" content="2019-01-08T12:12:11.164Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python数字、字符串、字节串相互转换">
 <meta name="twitter:description" content="近期用到了一些有关Python字节串的内容，整理一下相关数据类型之间的转换方法。 一.整型数据向其他类型的转换以下代码中a为int类型  整型 进制转换：转换后就变成了字符串！！！ 输出时进制转换：print(&amp;quot;%#x&amp;quot;%a)  或者 print(&amp;quot;%#o&amp;quot;%a)  浮点型 隐式转换 或者float(a)  字符串 直接转换：str(a) 改变进制：hex(">
@@ -377,9 +377,11 @@
 </li>
 <li><p>字节串</p>
 <p><code>bytes([a, a1, a2])</code>（解释：将需要转换的整型数字放入list中，再传给<code>bytes()</code>函数，如果直接将整型数字N传过去，会返回N个空字节。</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 10进制数组直接转换:</span></span><br><span class="line">bytes([1,2,3])  ==&gt; b'\x01\x02\x03' </span><br><span class="line"></span><br><span class="line"><span class="comment"># 16进制数组直接转换:</span></span><br><span class="line">bytes([0x01,0x02,0x31,0x32])  ==&gt;  b'\x01\x0212'</span><br></pre></td></tr></table></figure>
+<hr>
 <p><code>a.to_bytes(len, byteorder=&#39;big&#39;/&#39;little&#39;, signed=True/False)</code>其中len为转换后的字节串长度</p>
 <hr>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> struct</span><br><span class="line">struct.pack(<span class="string">'B'</span>/<span class="string">'&lt;H'</span>/<span class="string">'&gt;H'</span>, a)</span><br><span class="line"><span class="comment"># 第一个参数是格式字符串，指定了字节格式的长度，字节顺序等</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> struct</span><br><span class="line">struct.pack(<span class="string">'B'</span>/<span class="string">'&lt;H'</span>/<span class="string">'&gt;H'</span>, a) <span class="comment"># 第一个参数是格式字符串，指定了字节格式的长度，字节顺序等</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 转为两个字节: </span></span><br><span class="line">struct.pack('&lt;HH', 1,2)  ==&gt;  b'\x01\x00\x02\x00'</span><br><span class="line"></span><br><span class="line"><span class="comment"># 转为四个字节:</span></span><br><span class="line">struct.pack('&lt;LL', 1,2)  ==&gt;  b'\x01\x00\x00\x00\x02\x00\x00\x00'</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
 <h3 id="二、浮点型向其他类型的转换"><a href="#二、浮点型向其他类型的转换" class="headerlink" title="二、浮点型向其他类型的转换"></a>二、浮点型向其他类型的转换</h3><p>以下代码中f为float类型</p>
@@ -388,12 +390,8 @@
 <p>取整：<code>int(f)</code></p>
 <p>四舍六入五成双：<code>round(f)</code> <em>注意:</em> <code>round()</code>函数可以接收第二个参数调整舍入的位置，默认为1，如果是-1则舍入十位，如果是2则舍入百分位</p>
 </li>
-<li><p>浮点型</p>
-</li>
 <li><p>字符串</p>
 <p><code>str(f)</code></p>
-</li>
-<li><p>字节串</p>
 </li>
 </ol>
 <h3 id="三、字符串向其他类型的转换"><a href="#三、字符串向其他类型的转换" class="headerlink" title="三、字符串向其他类型的转换"></a>三、字符串向其他类型的转换</h3><p>以下代码中s为字符串类型</p>
@@ -411,19 +409,22 @@
 <li><p>浮点型</p>
 <p><code>float(s)</code></p>
 </li>
-<li><p>字符串</p>
+<li><p>字节串</p>
 </li>
 </ol>
-<ol start="4">
-<li>字节串</li>
-</ol>
+<p>在这里先介绍在Python3中<code>str</code>和<code>bytes</code>类型的区别，两种类型都用来表示字符序列，<code>str</code>包含的是Unicode字符，<code>bytes</code>包含的是原始的8位值。从原始二进制数据到Unicode（或者任意一种编码方式）字符的过程叫做decode，从字符到二进制数据的过程叫做encode。</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 普通字符串encode方式:</span></span><br><span class="line">'123abc'.encode('ascii') ==&gt; b'123abc' </span><br><span class="line"></span><br><span class="line"> <span class="comment"># 16进制字符串转换方式:</span></span><br><span class="line">bytes().fromhex('010210') ==&gt; b'\x01\x02\x10'</span><br><span class="line"></span><br><span class="line"><span class="comment"># 16进制字符串先转换为int再转为字节串:</span></span><br><span class="line">bytes(map(ord, '\x01\x02\x31\x32'))  ==&gt;  b'\x01\x0212'</span><br></pre></td></tr></table></figure>
 <h3 id="四、字节串向其他类型的转换"><a href="#四、字节串向其他类型的转换" class="headerlink" title="四、字节串向其他类型的转换"></a>四、字节串向其他类型的转换</h3><p>以下代码中b为字节串类型</p>
 <ol>
-<li>整型</li>
-<li>浮点型</li>
-<li>字符串</li>
-<li>字节串</li>
+<li><p>整型</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> struct</span><br><span class="line"></span><br><span class="line"><span class="comment"># 转义为short型整数: </span></span><br><span class="line">struct.unpack('&lt;hh', bytes(b'\x01\x00\x00\x00'))  ==&gt;  (1, 0)</span><br><span class="line">struct.unpack('&lt;hh', b'\x01\x00\x00\x00')  ==&gt;  (1, 0)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 转义为long型整数: </span></span><br><span class="line">struct.unpack('&lt;L', bytes(b'\x01\x00\x00\x00'))  ==&gt;  (1,)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>字符串</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 字节码解码为字符串:</span></span><br><span class="line">bytes(b'\x31\x32\x61\x62').decode('ascii')  ==&gt;  12ab</span><br><span class="line"></span><br><span class="line"><span class="comment"># 字节串转为16进制字符串数组</span></span><br><span class="line">[hex(x) for x in bytes(b'\x01\x0212')]  ==&gt;  ['0x1', '0x2', '0x31', '0x32']</span><br></pre></td></tr></table></figure>
+</li>
 </ol>
+<h3 id="附：字节数组"><a href="#附：字节数组" class="headerlink" title="附：字节数组"></a>附：字节数组</h3><p>字节串和字符串一样是不可变序列，字节数组就是可变版本的字节，类似与<code>list</code>与<code>tuple</code></p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">bytearray(b'hello')  ==&gt; bytearray(b'hello')</span><br><span class="line"></span><br><span class="line">bytearray()  ==&gt; bytearray(b'')</span><br><span class="line"></span><br><span class="line">bytearray([1,2,3]) ==&gt; bytearray(b'\x01\x02\x03')</span><br><span class="line"></span><br><span class="line">bytearray('runoob', 'utf-8') ==&gt; bytearray(b'runoob')</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -541,7 +542,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-count">10</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -612,7 +613,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#一-整型数据向其他类型的转换"><span class="nav-number">1.</span> <span class="nav-text">一.整型数据向其他类型的转换</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二、浮点型向其他类型的转换"><span class="nav-number">2.</span> <span class="nav-text">二、浮点型向其他类型的转换</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三、字符串向其他类型的转换"><span class="nav-number">3.</span> <span class="nav-text">三、字符串向其他类型的转换</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#四、字节串向其他类型的转换"><span class="nav-number">4.</span> <span class="nav-text">四、字节串向其他类型的转换</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#一-整型数据向其他类型的转换"><span class="nav-number">1.</span> <span class="nav-text">一.整型数据向其他类型的转换</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二、浮点型向其他类型的转换"><span class="nav-number">2.</span> <span class="nav-text">二、浮点型向其他类型的转换</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三、字符串向其他类型的转换"><span class="nav-number">3.</span> <span class="nav-text">三、字符串向其他类型的转换</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#四、字节串向其他类型的转换"><span class="nav-number">4.</span> <span class="nav-text">四、字节串向其他类型的转换</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#附：字节数组"><span class="nav-number">5.</span> <span class="nav-text">附：字节数组</span></a></li></ol></div>
             
 
           </div>
