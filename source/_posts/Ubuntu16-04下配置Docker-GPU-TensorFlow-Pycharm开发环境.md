@@ -1,7 +1,7 @@
 ---
 title: Ubuntu16.04下配置Docker+GPU+TensorFlow+Pycharm开发环境
 date: 2018-12-21 10:35:14
-tags: [TF,Docker]
+tags: [TensorFlow,Docker]
 categories: [Environment Configuration]
 ---
 
