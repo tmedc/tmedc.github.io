@@ -75,7 +75,7 @@
 
 
 
-  <meta name="keywords" content="Python,">
+  <meta name="keywords" content="TensorFlow,pytorch,">
 
 
 
@@ -86,18 +86,18 @@
 
 
 
-<meta name="description" content="近期用到了一些有关Python字节串的内容，整理一下相关数据类型之间的转换方法。 一.整型数据向其他类型的转换以下代码中a为int类型  整型 进制转换：转换后就变成了字符串！！！ 输出时进制转换：print(&amp;quot;%#x&amp;quot;%a)  或者 print(&amp;quot;%#o&amp;quot;%a)  浮点型 隐式转换 或者float(a)  字符串 直接转换：str(a) 改变进制：hex(">
-<meta name="keywords" content="Python">
+<meta name="description" content="1.安装NVIDIA显卡驱动介绍两种方法： 1.官网下载驱动文件，手动安装 去NVIDIA官网下载安装包，选择适配自己硬件的版本，然后本地安装（运行下载的runfile文件，运行时需要一些额外的参数，以及一些其他的操作） https://www.nvidia.com/Download/index.aspx?lang=en-us 注意：使用该方法在安装显卡驱动过程中，可能存在一些问题，我尝试几次之后">
+<meta name="keywords" content="TensorFlow,pytorch">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Python数字、字符串、字节串相互转换">
-<meta property="og:url" content="https://tmedc.github.io/2019/01/02/Python数字、字符串、字节串相互转换/index.html">
+<meta property="og:title" content="最简洁的TensorFlow与pytorch的conda安装">
+<meta property="og:url" content="https://tmedc.github.io/2019/04/22/TensorFlow与pytorch的conda安装/index.html">
 <meta property="og:site_name" content="Tmedc&#39;s Notes">
-<meta property="og:description" content="近期用到了一些有关Python字节串的内容，整理一下相关数据类型之间的转换方法。 一.整型数据向其他类型的转换以下代码中a为int类型  整型 进制转换：转换后就变成了字符串！！！ 输出时进制转换：print(&amp;quot;%#x&amp;quot;%a)  或者 print(&amp;quot;%#o&amp;quot;%a)  浮点型 隐式转换 或者float(a)  字符串 直接转换：str(a) 改变进制：hex(">
+<meta property="og:description" content="1.安装NVIDIA显卡驱动介绍两种方法： 1.官网下载驱动文件，手动安装 去NVIDIA官网下载安装包，选择适配自己硬件的版本，然后本地安装（运行下载的runfile文件，运行时需要一些额外的参数，以及一些其他的操作） https://www.nvidia.com/Download/index.aspx?lang=en-us 注意：使用该方法在安装显卡驱动过程中，可能存在一些问题，我尝试几次之后">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-01-08T12:12:11.164Z">
+<meta property="og:updated_time" content="2019-04-22T01:37:10.289Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Python数字、字符串、字节串相互转换">
-<meta name="twitter:description" content="近期用到了一些有关Python字节串的内容，整理一下相关数据类型之间的转换方法。 一.整型数据向其他类型的转换以下代码中a为int类型  整型 进制转换：转换后就变成了字符串！！！ 输出时进制转换：print(&amp;quot;%#x&amp;quot;%a)  或者 print(&amp;quot;%#o&amp;quot;%a)  浮点型 隐式转换 或者float(a)  字符串 直接转换：str(a) 改变进制：hex(">
+<meta name="twitter:title" content="最简洁的TensorFlow与pytorch的conda安装">
+<meta name="twitter:description" content="1.安装NVIDIA显卡驱动介绍两种方法： 1.官网下载驱动文件，手动安装 去NVIDIA官网下载安装包，选择适配自己硬件的版本，然后本地安装（运行下载的runfile文件，运行时需要一些额外的参数，以及一些其他的操作） https://www.nvidia.com/Download/index.aspx?lang=en-us 注意：使用该方法在安装显卡驱动过程中，可能存在一些问题，我尝试几次之后">
 
 
 
@@ -127,13 +127,13 @@
 
 
 
-  <link rel="canonical" href="https://tmedc.github.io/2019/01/02/Python数字、字符串、字节串相互转换/">
+  <link rel="canonical" href="https://tmedc.github.io/2019/04/22/TensorFlow与pytorch的conda安装/">
 
 
 
 
 
-  <title>Python数字、字符串、字节串相互转换 | Tmedc's Notes</title>
+  <title>最简洁的TensorFlow与pytorch的conda安装 | Tmedc's Notes</title>
   
 
 
@@ -270,7 +270,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://tmedc.github.io/2019/01/02/Python数字、字符串、字节串相互转换/">
+    <link itemprop="mainEntityOfPage" href="https://tmedc.github.io/2019/04/22/TensorFlow与pytorch的conda安装/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="tmedc">
@@ -287,7 +287,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Python数字、字符串、字节串相互转换</h1>
+          <h1 class="post-title" itemprop="name headline">最简洁的TensorFlow与pytorch的conda安装</h1>
         
 
         <div class="post-meta">
@@ -299,8 +299,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-01-02T10:37:57+08:00">
-                2019-01-02
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-04-22T09:11:19+08:00">
+                2019-04-22
               </time>
             
 
@@ -322,8 +322,8 @@
               
               
                 <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/Programing-Language/" itemprop="url" rel="index">
-                    <span itemprop="name">Programing Language</span>
+                  <a href="/categories/Environment-Configuration/" itemprop="url" rel="index">
+                    <span itemprop="name">Environment Configuration</span>
                   </a>
                 </span>
 
@@ -359,72 +359,43 @@
       
 
       
-        <p>近期用到了一些有关Python字节串的内容，整理一下相关数据类型之间的转换方法。</p>
-<h3 id="一-整型数据向其他类型的转换"><a href="#一-整型数据向其他类型的转换" class="headerlink" title="一.整型数据向其他类型的转换"></a>一.整型数据向其他类型的转换</h3><p>以下代码中a为int类型</p>
-<ol>
-<li><p>整型</p>
-<p>进制转换：转换后就变成了字符串！！！</p>
-<p>输出时进制转换：<code>print(&quot;%#x&quot;%a)</code>  或者 <code>print(&quot;%#o&quot;%a)</code></p>
+        <h2 id="1-安装NVIDIA显卡驱动"><a href="#1-安装NVIDIA显卡驱动" class="headerlink" title="1.安装NVIDIA显卡驱动"></a>1.安装NVIDIA显卡驱动</h2><p>介绍两种方法：</p>
+<p>1.官网下载驱动文件，手动安装</p>
+<p>去NVIDIA官网下载安装包，选择适配自己硬件的版本，然后本地安装（运行下载的runfile文件，运行时需要一些额外的参数，以及一些其他的操作）</p>
+<p><a href="https://www.nvidia.com/Download/index.aspx?lang=en-us" target="_blank" rel="noopener">https://www.nvidia.com/Download/index.aspx?lang=en-us</a></p>
+<p>注意：使用该方法在安装显卡驱动过程中，可能存在一些问题，我尝试几次之后还是失败</p>
+<p>2.PPA源安装</p>
+<p>方法十分简便，添加ppa源后，在system settings -&gt; Software &amp; Updates -&gt; Additional Drivers 中选择相应驱动即可。（据传该方法未必会有最新驱动，或者可能遇到问题，我运气比较好成功安装了）</p>
+<p>添加ppa源的命令如下:</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo add-apt-repository ppa:xorg-edgers/ppa #添加ppa源</span><br><span class="line">sudo add-apt-repository ppa:graphics-drivers/ppa #添加ppa源</span><br><span class="line">sudo apt-get update #更新apt-get</span><br></pre></td></tr></table></figure>
+<h2 id="2-安装CUDA和cuDNN"><a href="#2-安装CUDA和cuDNN" class="headerlink" title="2. 安装CUDA和cuDNN"></a>2. 安装CUDA和cuDNN</h2><p>1.安装CUDA</p>
+<ul>
+<li><p>下载对应版本的安装包 <a href="https://developer.nvidia.com/cuda-downloads" target="_blank" rel="noopener">https://developer.nvidia.com/cuda-downloads</a></p>
 </li>
-<li><p>浮点型</p>
-<p>隐式转换</p>
-<p>或者<code>float(a)</code></p>
+<li><p>关闭图形界面<code>sudo service lightdm stop</code></p>
 </li>
-<li><p>字符串</p>
-<p>直接转换：<code>str(a)</code></p>
-<p>改变进制：<code>hex(a</code>) ， <code>oct(a)</code></p>
-<p>数字到单个ASCII字符转换：<code>chr(a)</code></p>
+<li><p>在命令行模式下登陆，进入下载的CUDA runfile目录 <code>sudo sh cuda_8.0.44_linux.run</code></p>
 </li>
-<li><p>字节串</p>
-<p><code>bytes([a, a1, a2])</code>（解释：将需要转换的整型数字放入list中，再传给<code>bytes()</code>函数，如果直接将整型数字N传过去，会返回N个空字节。</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 10进制数组直接转换:</span></span><br><span class="line">bytes([1,2,3])  ==&gt; b'\x01\x02\x03' </span><br><span class="line"></span><br><span class="line"><span class="comment"># 16进制数组直接转换:</span></span><br><span class="line">bytes([0x01,0x02,0x31,0x32])  ==&gt;  b'\x01\x0212'</span><br></pre></td></tr></table></figure>
-<hr>
-<p><code>a.to_bytes(len, byteorder=&#39;big&#39;/&#39;little&#39;, signed=True/False)</code>其中len为转换后的字节串长度</p>
-<hr>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> struct</span><br><span class="line">struct.pack(<span class="string">'B'</span>/<span class="string">'&lt;H'</span>/<span class="string">'&gt;H'</span>, a) <span class="comment"># 第一个参数是格式字符串，指定了字节格式的长度，字节顺序等</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 转为两个字节: </span></span><br><span class="line">struct.pack('&lt;HH', 1,2)  ==&gt;  b'\x01\x00\x02\x00'</span><br><span class="line"></span><br><span class="line"><span class="comment"># 转为四个字节:</span></span><br><span class="line">struct.pack('&lt;LL', 1,2)  ==&gt;  b'\x01\x00\x00\x00\x02\x00\x00\x00'</span><br></pre></td></tr></table></figure>
+<li><p>按照指示进行安装，大部分按照默认选项即可，在安装过程中关于<code>Install NVIDIA Accelerated Graphics Driver for Linux-x86_64 361.62?
+(y)es/(n)o/(q)uit:</code>问题的选择，我个人在安装过程中选择了n，在第一次选择y的尝试中，后面出现了无法进入图形界面的问题</p>
 </li>
-</ol>
-<h3 id="二、浮点型向其他类型的转换"><a href="#二、浮点型向其他类型的转换" class="headerlink" title="二、浮点型向其他类型的转换"></a>二、浮点型向其他类型的转换</h3><p>以下代码中f为float类型</p>
-<ol>
-<li><p>整型</p>
-<p>取整：<code>int(f)</code></p>
-<p>四舍六入五成双：<code>round(f)</code> <em>注意:</em> <code>round()</code>函数可以接收第二个参数调整舍入的位置，默认为1，如果是-1则舍入十位，如果是2则舍入百分位</p>
+<li>打开图形界面<code>sudo service lightdm start</code> 回到图形界面，并把CUDA路径添加到环境变量（可自行Google，不再赘述）</li>
+</ul>
+<p>2.安装CuDNN</p>
+<ul>
+<li><p>下载CuDNN<a href="https://developer.nvidia.com/rdp/cudnn-download（需要注册账号）" target="_blank" rel="noopener">https://developer.nvidia.com/rdp/cudnn-download（需要注册账号）</a></p>
 </li>
-<li><p>字符串</p>
-<p><code>str(f)</code></p>
+<li><p>下载对应版本和系统的cuDNN Library，得到tgz文件，解压后得到cuda目录，复制到CUDA安装目录中</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo cp cuda/include/cudnn.h /usr/local/cuda-10.0/include</span><br><span class="line">sudo cp cuda/lib64/libcudnn* /usr/local/cuda-10.0/lib64</span><br></pre></td></tr></table></figure>
 </li>
-</ol>
-<h3 id="三、字符串向其他类型的转换"><a href="#三、字符串向其他类型的转换" class="headerlink" title="三、字符串向其他类型的转换"></a>三、字符串向其他类型的转换</h3><p>以下代码中s为字符串类型</p>
-<ol>
-<li><p>整型</p>
-<p>十进制字符串转为int：<code>int(s)</code></p>
-<p>N进制字符串转为int：<code>int(s, N)</code></p>
-<p>二进制字符串转为int：<code>int(s, 2)</code></p>
-<p>八进制字符串转为int：<code>int(s,8)</code></p>
-<p>十六进制字符串转为int：<code>int(s, 16)</code></p>
-</li>
-</ol>
-<p>​    单个字符转换为ASCII序号：<code>ord(s)</code></p>
-<ol start="2">
-<li><p>浮点型</p>
-<p><code>float(s)</code></p>
-</li>
-<li><p>字节串</p>
-</li>
-</ol>
-<p>在这里先介绍在Python3中<code>str</code>和<code>bytes</code>类型的区别，两种类型都用来表示字符序列，<code>str</code>包含的是Unicode字符，<code>bytes</code>包含的是原始的8位值。从原始二进制数据到Unicode（或者任意一种编码方式）字符的过程叫做decode，从字符到二进制数据的过程叫做encode。</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 普通字符串encode方式:</span></span><br><span class="line">'123abc'.encode('ascii') ==&gt; b'123abc' </span><br><span class="line"></span><br><span class="line"> <span class="comment"># 16进制字符串转换方式:</span></span><br><span class="line">bytes().fromhex('010210') ==&gt; b'\x01\x02\x10'</span><br><span class="line"></span><br><span class="line"><span class="comment"># 16进制字符串先转换为int再转为字节串:</span></span><br><span class="line">bytes(map(ord, '\x01\x02\x31\x32'))  ==&gt;  b'\x01\x0212'</span><br></pre></td></tr></table></figure>
-<h3 id="四、字节串向其他类型的转换"><a href="#四、字节串向其他类型的转换" class="headerlink" title="四、字节串向其他类型的转换"></a>四、字节串向其他类型的转换</h3><p>以下代码中b为字节串类型</p>
-<ol>
-<li><p>整型</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> struct</span><br><span class="line"></span><br><span class="line"><span class="comment"># 转义为short型整数: </span></span><br><span class="line">struct.unpack('&lt;hh', bytes(b'\x01\x00\x00\x00'))  ==&gt;  (1, 0)</span><br><span class="line">struct.unpack('&lt;hh', b'\x01\x00\x00\x00')  ==&gt;  (1, 0)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 转义为long型整数: </span></span><br><span class="line">struct.unpack('&lt;L', bytes(b'\x01\x00\x00\x00'))  ==&gt;  (1,)</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>字符串</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 字节码解码为字符串:</span></span><br><span class="line">bytes(b'\x31\x32\x61\x62').decode('ascii')  ==&gt;  12ab</span><br><span class="line"></span><br><span class="line"><span class="comment"># 字节串转为16进制字符串数组</span></span><br><span class="line">[hex(x) for x in bytes(b'\x01\x0212')]  ==&gt;  ['0x1', '0x2', '0x31', '0x32']</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<h3 id="附：字节数组"><a href="#附：字节数组" class="headerlink" title="附：字节数组"></a>附：字节数组</h3><p>字节串和字符串一样是不可变序列，字节数组就是可变版本的字节，类似与<code>list</code>与<code>tuple</code></p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">bytearray(b'hello')  ==&gt; bytearray(b'hello')</span><br><span class="line"></span><br><span class="line">bytearray()  ==&gt; bytearray(b'')</span><br><span class="line"></span><br><span class="line">bytearray([1,2,3]) ==&gt; bytearray(b'\x01\x02\x03')</span><br><span class="line"></span><br><span class="line">bytearray('runoob', 'utf-8') ==&gt; bytearray(b'runoob')</span><br></pre></td></tr></table></figure>
+</ul>
+<h2 id="3-conda-安装TensorFlow"><a href="#3-conda-安装TensorFlow" class="headerlink" title="3.conda 安装TensorFlow"></a>3.conda 安装TensorFlow</h2><ul>
+<li>执行命令<code>sudo conda install tensorflow-gpu==1.13.1</code>，自动安装即可</li>
+</ul>
+<h2 id="4-conda安装pytorch"><a href="#4-conda安装pytorch" class="headerlink" title="4.conda安装pytorch"></a>4.conda安装pytorch</h2><ul>
+<li>执行命令<code>sudo conda install pytorch torchvision cudatoolkit=10.0 -c pytorch</code>，自动安装即可</li>
+</ul>
+<p>安装完成后，可以导入TensorFlow和pytorch包检验是否正确安装</p>
 
       
     </div>
@@ -442,7 +413,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Python/" rel="tag"># Python</a>
+            <a href="/tags/TensorFlow/" rel="tag"># TensorFlow</a>
+          
+            <a href="/tags/pytorch/" rel="tag"># pytorch</a>
           
         </div>
       
@@ -455,8 +428,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/12/21/Ubuntu16-04下配置Docker-GPU-TensorFlow-Pycharm开发环境/" rel="next" title="Ubuntu16.04下配置Docker+GPU+TensorFlow+Pycharm开发环境">
-                <i class="fa fa-chevron-left"></i> Ubuntu16.04下配置Docker+GPU+TensorFlow+Pycharm开发环境
+              <a href="/2019/01/02/Python数字、字符串、字节串相互转换/" rel="next" title="Python数字、字符串、字节串相互转换">
+                <i class="fa fa-chevron-left"></i> Python数字、字符串、字节串相互转换
               </a>
             
           </div>
@@ -464,10 +437,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/04/22/TensorFlow与pytorch的conda安装/" rel="prev" title="最简洁的TensorFlow与pytorch的conda安装">
-                最简洁的TensorFlow与pytorch的conda安装 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -617,7 +586,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#一-整型数据向其他类型的转换"><span class="nav-number">1.</span> <span class="nav-text">一.整型数据向其他类型的转换</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二、浮点型向其他类型的转换"><span class="nav-number">2.</span> <span class="nav-text">二、浮点型向其他类型的转换</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三、字符串向其他类型的转换"><span class="nav-number">3.</span> <span class="nav-text">三、字符串向其他类型的转换</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#四、字节串向其他类型的转换"><span class="nav-number">4.</span> <span class="nav-text">四、字节串向其他类型的转换</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#附：字节数组"><span class="nav-number">5.</span> <span class="nav-text">附：字节数组</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-安装NVIDIA显卡驱动"><span class="nav-number">1.</span> <span class="nav-text">1.安装NVIDIA显卡驱动</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-安装CUDA和cuDNN"><span class="nav-number">2.</span> <span class="nav-text">2. 安装CUDA和cuDNN</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-conda-安装TensorFlow"><span class="nav-number">3.</span> <span class="nav-text">3.conda 安装TensorFlow</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-conda安装pytorch"><span class="nav-number">4.</span> <span class="nav-text">4.conda安装pytorch</span></a></li></ol></div>
             
 
           </div>
