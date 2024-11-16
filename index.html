@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>温度计算器</title>
+    <!-- <link href="heat.css" rel="stylesheet"> -->
+  </head>
+
+<body>
+  <p>
+  <label for="out_temp">
+  <span>室外温度(ºC): </span>
+  </label>
+  <input type="number" id="out_temp" value="0">
+  </p>
+  <p>
+  <label for="out_factor">
+  <span>墙壁散热系数: </span>
+  </label>
+  <input type="number" id="out_factor" value="1.2">
+  </p>
+  <p>
+  <label for="in_temp">
+  <span>室内目标温度(ºC): </span>
+  </label>
+  <input type="number" id="in_temp" value="22">
+  </p>
+  <p>
+  <label for="heat_factor">
+  <span>暖气散热系数: </span>
+  </label>
+  <input type="number" id="heat_factor" value="2">
+  </p>
+  <hr />
+  <p>
+  <label for="r2_flow">
+  <span>二网流量: </span>
+  </label>
+  <input type="number" id="r2_flow" value="2.0">
+  </p>
+  <p>
+  <label for="r2_in_temp">
+  <span>二网供水温度(ºC): </span>
+  </label>
+  <input type="number" id="r2_in_temp" disabled="disabled">
+  </p>
+  <p>
+  <label for="r2_out_temp">
+  <span>二网回水温度(ºC): </span>
+  </label>
+  <input type="number" id="r2_out_temp" disabled="disabled">
+  </p>
+  <p>
+  <label for="trans2_factor">
+  <span>二网板换散热系数(1000*0.003): </span>
+  </label>
+  <input type="number" id="trans2_factor" value="3">
+  </p>
+  <hr />
+  <p>
+  <label for="r1_flow">
+  <span>一网流量: </span>
+  </label>
+  <input type="number" id="r1_flow" value="0.5">
+  </p>
+  <p>
+  <label for="r1_in_temp">
+  <span>一网供水温度(ºC): </span>
+  </label>
+  <input type="number" id="r1_in_temp" disabled="disabled">
+  </p>
+  <p>
+  <label for="r1_out_temp">
+  <span>一网回水温度(ºC): </span>
+  </label>
+  <input type="number" id="r1_out_temp" disabled="disabled">
+  </p>
+  <p>
+  <label for="trans1_factor">
+  <span>一网板换散热系数(1700*10000/7000000): </span>
+  </label>
+  <input type="number" id="trans1_factor" value="2.429">
+  </p>
+  <hr />
+   <p>
+  <label for="r0_flow">
+  <span>零网流量(4000000/7000000): </span>
+  </label>
+  <input type="number" id="r0_flow" value="0.5714">
+  </p>
+  <p>
+  <label for="r0_in_temp">
+  <span>零网供水温度(ºC): </span>
+  </label>
+  <input type="number" id="r0_in_temp" disabled="disabled">
+  </p>
+  <p>
+  <label for="r0_out_temp">
+  <span>零网回水温度(ºC): </span>
+  </label>
+  <input type="number" id="r0_out_temp" disabled="disabled">
+  </p>
+  <hr />
+  <div><button id="submit">根据流量计算各级温度</button></div>
+  <script src="heat.js"></script></script>
+</body>
+
+</html>
+
